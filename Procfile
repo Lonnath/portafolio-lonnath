@@ -1,0 +1,1 @@
+web: gunicorn portafolio-lonnath.wsgi
