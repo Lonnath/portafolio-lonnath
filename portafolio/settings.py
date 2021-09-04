@@ -113,14 +113,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'media_root')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_URL = '/staticfiles/'
 if not DEBUG:
     STATIC_ROOT = ''
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles/'),
