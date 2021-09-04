@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6=#-)&ljzdrj9$$)r9r9e0_bc21l7v8r%7h0lq50daykqaoyg='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'vista_inicial',
+    'error_handlers',
 ]
 
 MIDDLEWARE = [
@@ -51,11 +53,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'portafolio.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,12 +118,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATICFILES_DIRS =  [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'portafolio/static'),
+    #'/var/www/portafolio/static/',
 ]
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles") 
+STATIC_ROOT = os.path.join(BASE_DIR, "static") 
+#STATIC_ROOT = "/var/www/portafolio/static/"
 STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Default primary key field type
