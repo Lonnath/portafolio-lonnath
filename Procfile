@@ -1,1 +1,1 @@
-web: gunicorn portafolio-lonnath.wsgi
+web: gunicorn portafolio.wsgi
