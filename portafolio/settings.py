@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6=#-)&ljzdrj9$$)r9r9e0_bc21l7v8r%7h0lq50daykqaoyg='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'vista_inicial',
+    'proyectos',
     'error_handlers',
 ]
 
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'portafolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dirulb5vccphq',
+        'USER': 'wakbwkvhqfitzn',
+        'PASSWORD':'8c760dadcb845598bd905865084b1ed70b7f0bee0ef9a040905846e105cede3e',
+        'HOST': 'ec2-35-153-114-74.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 

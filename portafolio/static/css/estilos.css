@@ -1,0 +1,197 @@
+body {
+    overflow:hidden;
+    background: linear-gradient(70deg, #858585, #F5F5F5, #6a8ca0  , rgb(5, 174, 247) );
+	background-position: 0% 25%; 
+    background-size: 400% 400%;
+	animation: gradient 2s ease 1;
+	height: 100vh;
+}
+@keyframes gradient {
+	from {
+		background-position: 100% 50%;
+	}
+    to{
+        background-position: 0% 25%;
+    }
+}
+.body-animation{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 1px 0px 5px #5e5e5e;
+    animation: body-border-animation .8s alternate 1;
+}
+@keyframes body-border-animation {
+    0%{
+        box-shadow: inset 1px 1px 5px #5e5e5e;
+    }
+    50%{
+        box-shadow: inset 1px 1px 30px #5e5e5e;
+    }
+    100%{
+        box-shadow: inset 1px 1px 5px #5e5e5e;
+    }
+}
+.line-border-bottom{
+    border-bottom: 2px inset gray;
+    border-radius: 3px;
+}
+@keyframes line-border-bottom{
+    0%{
+        border-bottom: 3px inset gray;
+    }
+    50%{
+        border-bottom: 2px inset gray;
+    }
+    75%{
+        border-bottom: 3px inset gray;
+    }
+    100%{
+        border-bottom: 2px inset gray;
+    }
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color:black;
+    text-shadow: 2px 2px 2px #C4C4C4;
+    animation: text-shadow-animation 2s linear infinite;
+}
+@keyframes text-shadow-animation{
+    25%{
+        color: #3B3B3B;
+        text-shadow: 2px 3px 2px #8A8A8A;
+    }
+    50%{
+        color: black;
+        text-shadow: 2px 3px 2px #CFCFCF;
+        
+    }
+    75%{
+        color: #3B3B3B;
+        text-shadow: 2px 3px 2px #8A8A8A;
+    }
+    100%{
+        color: black;
+        text-shadow: 2px 3px 2px #C4C4C4;
+    }
+}
+.point{
+    opacity: 0;
+}
+a:hover > .point{
+    animation: point-animation 1s ease infinite;
+}
+@keyframes point-animation {
+    25%, 75% {
+        opacity: 1;
+    }
+    50%, 100%{
+        opacity: 0;
+    }
+
+}
+.navbar-mod{
+    background-color: transparent!important;
+    
+}
+.move-to-left{
+    width: 100%;
+    margin-left: 0%;
+    animation: move-to-left-animation .5s linear 1;
+}
+@keyframes move-to-left-animation{
+    from{
+        width: 0%;
+        margin-left: 150%;
+    }
+    to {
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+.font-azeret-mono {
+    font-family: 'Azeret Mono', monospace;
+}
+.font-glory-sans-serif{
+    font-family: 'Glory', sans-serif;
+}
+
+.font-8{
+    font-size: 8px;
+}
+.font-10{
+    font-size: 10px;
+}
+
+.font-12{
+    font-size: 12px;
+}
+
+.font-14{
+    font-size: 14px;
+}
+.offcanvas{
+    border-top-left-radius: 30px !important;
+}
+.herramienta-lenguaje{
+    margin-top: 85%;
+}
+.contenido{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: calc(100vh - (100vh - 100px));
+    margin-left: 10%;
+    width: 80%;
+    height: calc(100vh - 200px);
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #5900FF #E3E3E3;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 6px;
+    box-shadow: 11px 11px 11px rgb(44, 44, 44);
+}
+
+*::-webkit-scrollbar-track {
+    background: #E3E3E3;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #938e9b;
+    border-radius: 50px;
+    border: 1px outset #E3E3E3;
+}
+
+.card{
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    margin-top: 0px;
+    margin-left: 0px;
+    box-shadow: none;
+    transition: width .5s, height .5s, margin-top .5s, margin-left .5s, box-shadow .5s;
+}
+.card:hover{
+    width: 302!important;
+    height: 202px!important;
+    margin-top: -2px!important;
+    margin-left: -2px!important;
+    box-shadow: 0px 15px 15px gray;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    margin-top : 50px;
+    
+}

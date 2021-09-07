@@ -16,11 +16,11 @@ Including another URLconf
 from django.conf.urls import handler400, handler403, handler500, handler404
 from django.contrib import admin
 from django.urls import path, include
-from vista_inicial import views
+from proyectos import views
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.principal, name='principal'),
     path('admin/', admin.site.urls),
 ]
 handler400 = 'error_handlers.views.error_400'
