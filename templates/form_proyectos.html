@@ -14,9 +14,9 @@
 </head>
 <body>
     <div id="body" class="body">
-        <nav class="navbar navbar-light bg-light fixed-top navbar-mod move-to-left">
+        <nav class="navbar navbar-light bg-light fixed-top navbar-mod">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     Portafolio Servicios 
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -82,7 +82,7 @@
                             <li class="nav-item line-border-bottom">
                                 <a class="nav-link font-azeret-mono" href="registro_proyectos">
                                     <span>
-                                        administrador
+                                        Salir
                                     </span>
                                     <span class="point"><</span>
                                 </a>
@@ -93,31 +93,14 @@
             </div>
         </nav>
         <div class="contenido">
-            <div class="row">
-                <div class="col-3 mx-5">
-                    <div class="card">
-                        <img src="image.jpg" class="card-img-top" width="100" height="100">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3 me-5">
-                    <div class="card">
-                        <img src="image.jpg" class="card-img-top" width="100" height="100">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card">
-                        <img src="image.jpg" class="card-img-top" width="100" height="100">
-                        <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="form-group">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        {{formulario.as_table}}
+                    </table>
+                    <input type="submit">
+                </form>
             </div>
             
         </div>

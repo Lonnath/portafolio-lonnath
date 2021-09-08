@@ -21,6 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     path('', views.principal, name='principal'),
+    path('registro_proyectos', views.registro_proyectos, name='registro_proyectos'),
     path('admin/', admin.site.urls),
 ]
 handler400 = 'error_handlers.views.error_400'
