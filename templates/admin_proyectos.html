@@ -84,17 +84,27 @@
                 </div>
             </div>
         </nav>
-        <div class="contenido">
-            <div class="form-group">
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    <table>
-                        {{login.as_table}}
-                    </table>
-                    <input type="submit">
-                </form>
+        <div class="contenido d-flex justify-content-center">
+            <div class="">
+                <h1>Login</h1>
+                <div class="form-group d-block">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <table class="mb-5">
+                            {{login.as_table}}
+                            <tr>
+                                <td>
+                                    <span class="{{acceso_estilo}}">{{ acceso }}</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="d-flex justify-content-end">
+                            <input class="btn btn-success" type="submit">
+                        </div>
+                        
+                    </form>
+                </div>
             </div>
-            
         </div>
         <footer class="font-glory-sans-serif">
             <div class="mx-5">
