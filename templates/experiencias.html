@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono&Glory:ital,wght@1,300&display=swap" rel="stylesheet"> 
+    <title>Presentación</title>
+</head>
+<body>
+    <div id="body" class="body">
+        <nav class="navbar navbar-light bg-light fixed-top navbar-mod move-to-left">
+            <div class="container-fluid">
+                <a class="navbar-brand text-sha" href="/">
+                    Portafolio Servicios 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title font-azeret-mono" id="offcanvasNavbarLabel">Desarrollador Web</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body offcanvas-mod">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item line-border-bottom">
+                                <a class="nav-link font-azeret-mono text-sha active" aria-current="page" href="/informacion">
+                                    <span>
+                                        Acerca de Mi
+                                    </span>
+                                    <span class="point"><</span>
+                                </a>
+                            </li>
+                            <li class="nav-item line-border-bottom">
+                                <a class="nav-link font-azeret-mono text-sha" href="/estudios">
+                                    <span>
+                                        Estudios
+                                    </span>
+                                    <span class="point"><</span>
+                                </a>
+                            </li>
+                            <li class="nav-item line-border-bottom">
+                                <a class="nav-link font-azeret-mono text-sha" href="/experiencias">
+                                    <span>
+                                        Experiencias
+                                    </span>
+                                    <span class="point"><</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item line-border-bottom">
+                                <a class="nav-link font-azeret-mono text-sha" href="#">
+                                    <span>
+                                        Atribuciones
+                                        <!--<a href='https://www.freepik.es/vectores/flecha'>Vector de Flecha creado por pch.vector - www.freepik.es</a>-->
+                                    </span>
+                                    <span class="point"><</span>
+                                </a>
+                            </li>
+                            <li class="nav-item line-border-bottom herramienta-lenguaje">
+                                <a class="nav-link font-azeret-mono text-sha" href="#">
+                                    <span>
+                                        Lenguaje Implementado
+                                    </span>
+                                    <span class="point"><</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="contenido">
+            {% for experiencia in experiencias %}
+                <div class="row">
+                    <div class="col-12 mx-5 mb-5">
+                        <div class="card" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" title="Aviso:" data-bs-content="Para visualizar el proyecto clickea el cuadro">
+                            <a href="http://{{proyecto.url_proyecto}}" class="text-sha">
+                                <div class="card-body">
+                                    <h5 class="card-title text-sha">{{experiencia.nombre_cargo}} - ( {{experiencia.anio_entrada}} - {{experiencia.anio_finalizacion}} ) - {{experiencia.empresa}}</h5>
+                                    <p class="card-text text-sha">{{experiencia.descripcion}}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            {% endfor %} 
+        </div>
+        <footer class="font-glory-sans-serif">
+            <div class="mx-5">
+                Luis Alfredo Mejias Valero - (+57) 322-336-7528 - lonnath.dev@gmail.com 
+            </div>
+            <span class="font-10">
+                Este portafolio solo es para enseñar las capacidades que poseo en el area de desarrollo, los diseños usados pueden pertenecer a otros autores y por ende hay una sección en cada proyecto llamada atribuciones en la cual se comparte la información referente a los autores de los diseños.
+            </span>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="{% static 'js/visuales.js' %}"></script>
+</body>
+</html>
